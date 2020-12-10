@@ -48,13 +48,20 @@
     <div class="container-fluid p-0">
 
         <!-- About-->
+        <div style="margin-left:850px;margin-top:20px">
+            <p id="visitors"> </p>
+        </div>
 
         <section class="resume-section" id="about">
-            <div class="resume-section-content">
+            <div class="resume-section-content" style="margin-top:-100px;">
+
                 <h1 class="mb-0">
+
                     Pranam
                     <span class="text-primary">Bhat</span>
+
                 </h1>
+
                 <h3>Blogger | Full Stack Developer | Open Source Enthusiast</h3>
                 <div class="subheading mb-5">
                 </div>
@@ -707,6 +714,21 @@
 
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script>
+
+        var n = localStorage.getItem('on_load_counter');
+
+        if (n === null) {
+            n = 0;
+        }
+
+        n++;
+
+        localStorage.setItem("on_load_counter", n);
+
+        document.getElementById('visitors').innerHTML = "Visitors : " + n;
+    </script>
+    </script>
 
 </body>
 
